@@ -1,0 +1,26 @@
+body{
+    justify-content: center;
+    
+}
+
+.container{
+    margin: 25px;
+
+}
+.sub-container{
+
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    justify-content: center;
+   margin: 20px;
+}
+.addbtn{
+    background-color: blue;
+}
+.clearbtn{
+    background-color: red;
+}
+button{
+    margin:10px
+}

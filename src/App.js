@@ -1,6 +1,7 @@
 
 import React,{useState,useRef, useEffect} from 'react';
 import TodoList from './TodoList';
+import "./css/styles.css"
 // import uuid  from 'uuidv4';
 import { nanoid } from 'nanoid'; //generating a unique key id
 
@@ -51,11 +52,16 @@ function toggleTodo(id){
 
   return (
     <>
+    <div className='container'>
+
     <TodoList toggleTodo={toggleTodo} todos={todos}/>
+    <div className='sub-container'>
     <input ref={todoNameRef} type="text"/>
-    <button onClick={handleAddTodo}>Add Todo</button>
-    <button onClick={hnadleClearTodos}>Clear Completed Todos</button>
+    <button className='addbtn' onClick={handleAddTodo}>Add Todo</button>
+    <button className='clearbtn' onClick={hnadleClearTodos}>Clear Completed Todos</button>
     <div>{todos.filter(todo=> !todo.complete).length} left to do </div>
+    </div>
+    </div>
     </>
     
   );
